@@ -219,6 +219,14 @@ header {
   background-image: linear-gradient(rgba(255, 98, 0, 0.747) 0, rgba(255, 149, 0, 0.411) 100%);
 }
 
+.bg-gradient-reverse {
+  background-image: linear-gradient(rgba(255, 149, 0, 0.411) 0, rgba(255, 98, 0, 0.747) 100%);
+}
+
+.dark-bg {
+  background-color: rgba(255, 98, 0, 0.747);
+}
+
 .tagline {
   font-size: 17px;
   font-weight: 300;
@@ -443,7 +451,7 @@ header {
 
 .call-to-action {
   text-align: center;
-  color: #fff;
+  color: #000000;
   margin: 3rem 0;
 }
 .call-to-action .box-icon {
