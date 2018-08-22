@@ -1,31 +1,37 @@
 @charset "UTF-8";
 //colors
 
-$bg-gradient-color-1: rgba(255, 96, 0, 0.8);
-$bg-gradient-color-2: rgba(200, 88, 0, 0.8);
+$bg-gradient-color-1: hsla(23, 100%, 50%, 0.747);
+$light-bg-color: rgba(255, 149, 0, 0.411);
+$bg-gradient-color-2: $light-bg-color;
 
-$tagline-color: #621708;
 
-$bg-button-gradient-1: #941b0c;
-$bg-button-gradient-2: #bc3908;
+$tagline-color: #533100;
+
+$bg-button-gradient-1: #8b104e;
+$bg-button-gradient-2: #520556;
+
+$smaller_header_color: #533100;
+
+$bg-feature-color-1: $bg-gradient-color-1;
+$feature-color: $bg-gradient-color-2;
 
 $color_light_wisteria_approx: #cd99d4;
 $color_shocking_approx: #e38cb7;
 $color_hopbush_approx: #d6619c;
-$color_gigas_approx: #633991;
+
 $color_mountain_mist_approx: #959094;
 
 $black_20: rgba(0, 0, 0, 0.2);
 $black_30: rgba(0, 0, 0, 0.3);
 $white: #fff;
 $black_26: rgba(0, 0, 0, 0.26);
-$color_white_lilac_approx: #faf6fb;
+
 $color_pigment_indigo_approx: #4a0d8f;
 $black_10: rgba(0, 0, 0, 0.1);
 
 
-$color_hot_pink_approx: #fc73b4;
-$color_purple_mountains_majesty_approx: #9477b4;
+
 $black_4: rgba(0, 0, 0, 0.04);
 $black_8: rgba(0, 0, 0, 0.08);
 $black_14: rgba(0, 0, 0, 0.14);
@@ -92,24 +98,24 @@ h1 {
 h2 {
 	font-size: 45px;
 	font-weight: 300;
-	color: $color_gigas_approx;
+	color: $smaller_header_color;
 	letter-spacing: -1px;
 	margin-bottom: 1rem;
 }
 h3 {
-	color: $color_gigas_approx;
+	color: $smaller_header_color;
 	font-size: 33px;
 	font-weight: 500;
 }
 h4 {
 	font-size: 20px;
 	font-weight: 500;
-	color: $color_gigas_approx;
+	color: $smaller_header_color;
 }
 h5 {
 	font-size: 28px;
 	font-weight: 300;
-	color: $color_gigas_approx;
+	color: $smaller_header_color;
 	margin-bottom: 0.7rem;
 }
 p {
@@ -168,7 +174,7 @@ p {
 	box-shadow: 0 9px 32px 0 $black_26;
 	font-size: 14px;
 	font-weight: 500;
-	color: $color_gigas_approx;
+	color: $smaller_header_color;
 	margin: 0.5rem;
 	padding: 0.7rem 1.6rem;
 	line-height: 1.8;
@@ -182,7 +188,7 @@ p {
 	font-size: 15px;
 }
 .light-bg {
-	background-color: $color_white_lilac_approx;
+	background-color: $light-bg-color;
 }
 .section {
 	padding: 80px 0;
@@ -271,12 +277,12 @@ p {
 	}
 }
 header {
-	padding: 100px 0 0;
+	padding: 50px 0 0;
 	text-align: center;
 	color: $white;
 }
 .bg-gradient {
-	background-image: linear-gradient(135deg, $bg-gradient-color-1 0, $bg-gradient-color-2 100%);
+	background-image: linear-gradient($bg-gradient-color-1 0, $bg-gradient-color-2 100%);
 }
 .tagline {
 	font-size: 17px;
@@ -308,8 +314,8 @@ header {
 			content: "";
 			position: absolute;
 			width: 3px;
-			color: $color_hot_pink_approx;
-			background: linear-gradient(to bottom, $color_purple_mountains_majesty_approx 0, $color_hot_pink_approx 100%);
+			color: $feature-color;
+			background: linear-gradient(to bottom, $bg-feature-color-1 0, $feature-color 100%);
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -325,10 +331,10 @@ header {
 		border: 1px solid $color_gallery_approx;
 		&.popular {
 			border-top-width: 3px;
-			border-color: $color_hopbush_approx $color_white_lilac_approx $white;
+			border-color: $color_hopbush_approx $light-bg-color $white;
 			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 			box-shadow: 0 12px 59px 0 $color_jacaranda_11_approx;
-			color: $color_gigas_approx;
+			color: $smaller_header_color;
 		}
 		.card-head {
 			text-align: center;
@@ -337,7 +343,7 @@ header {
 				display: block;
 				font-size: 45px;
 				font-weight: 300;
-				color: $color_gigas_approx;
+				color: $smaller_header_color;
 				sub {
 					bottom: 0;
 					font-size: 55%;
@@ -431,14 +437,14 @@ header {
 	.nav-link {
 		&:focus {
 			padding: 1rem;
-			border-color: $color_white_lilac_approx $color_white_lilac_approx $white;
+			border-color: $light-bg-color $light-bg-color $white;
 			font-size: 19px;
 			color: $color_london_hue_approx;
 			background: $color_wild_sand_approx;
 		}
 		&:hover {
 			padding: 1rem;
-			border-color: $color_white_lilac_approx $color_white_lilac_approx $white;
+			border-color: $light-bg-color $light-bg-color $white;
 			font-size: 19px;
 			color: $color_london_hue_approx;
 			background: $color_wild_sand_approx;
@@ -446,13 +452,13 @@ header {
 		&.active {
 			background: $white;
 			border-top-width: 3px;
-			border-color: $color_hopbush_approx $color_white_lilac_approx $white;
-			color: $color_gigas_approx;
+			border-color: $color_hopbush_approx $light-bg-color $white;
+			color: $smaller_header_color;
 		}
 	}
 	.nav-item .nav-link {
 		padding: 1rem;
-		border-color: $color_white_lilac_approx $color_white_lilac_approx $white;
+		border-color: $light-bg-color $light-bg-color $white;
 		font-size: 19px;
 		color: $color_london_hue_approx;
 		background: $color_wild_sand_approx;
@@ -575,8 +581,8 @@ header {
 	position: relative;
 }
 .gradient-fill:before {
-	color: $color_hot_pink_approx;
-	background: linear-gradient(to bottom, $color_purple_mountains_majesty_approx 0, $color_hot_pink_approx 100%);
+	color: $feature-color;
+	background: linear-gradient(to bottom, $bg-feature-color-1 0, $feature-color 100%);
 	//Instead of the line below you could use @include background-clip($clip)
 	background-clip: text;
 }
