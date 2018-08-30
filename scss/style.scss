@@ -9,16 +9,16 @@ $bg-gradient-color-2: $light-bg-color;
 $tagline-color: #533100;
 
 $bg-button-gradient-1: #8b104e;
-$bg-button-gradient-2: #520556;
+$bg-button-gradient-2: $light-bg-color;
 
 $smaller_header_color: #533100;
 
 $bg-feature-color-1: $bg-gradient-color-1;
 $feature-color: $bg-gradient-color-2;
 
-$color_light_wisteria_approx: #cd99d4;
-$color_shocking_approx: #e38cb7;
-$color_hopbush_approx: #d6619c;
+$color_light_wisteria_approx: $light-bg-color;
+$color_shocking_approx: $bg-gradient-color-1;
+$color_hopbush_approx: $bg-gradient-color-1;
 
 $color_mountain_mist_approx: #959094;
 
@@ -27,7 +27,7 @@ $black_30: rgba(0, 0, 0, 0.3);
 $white: #fff;
 $black_26: rgba(0, 0, 0, 0.26);
 
-$color_pigment_indigo_approx: #4a0d8f;
+$color_pigment_indigo_approx: $bg-gradient-color-1;
 $black_10: rgba(0, 0, 0, 0.1);
 
 
@@ -48,7 +48,7 @@ $color_gallery_approx: #f1eef1;
 $color_jacaranda_11_approx: rgba(36, 7, 31, 0.11);
 $color_swiss_coffee_approx: #d9d3d8;
 $black_5: rgba(0, 0, 0, 0.05);
-$color_chantilly_approx: #f4c9e2;
+$color_chantilly_approx: $tagline-color;
 
 //fonts
 $font_0: Rubik;
