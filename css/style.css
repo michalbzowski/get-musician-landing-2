@@ -1,11 +1,11 @@
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-image: linear-gradient(122deg, rgba(255, 149, 0, 0.411) 0, bg-button-gradient-1 100%);
+  background-image: linear-gradient(122deg, #3588b1 0, bg-button-gradient-1 100%);
   box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.3);
   color: #fff;
 }
 
 .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active {
-  background-image: linear-gradient(122deg, rgba(255, 149, 0, 0.411) 0, bg-button-gradient-1 100%);
+  background-image: linear-gradient(122deg, #3588b1 0, bg-button-gradient-1 100%);
   box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.3);
   color: #fff;
 }
@@ -13,6 +13,7 @@
 body {
   font-family: Rubik, sans-serif;
   position: relative;
+  background-image: url(https://subtlepatterns.com/patterns/kindajean.png);
 }
 
 a {
@@ -86,7 +87,7 @@ p.lead {
 
 .btn-primary {
   border-radius: 3px;
-  background-image: linear-gradient(122deg, #8b104e 0, rgba(255, 149, 0, 0.411) 100%);
+  background-image: linear-gradient(122deg, #3537b1 0, #3588b1 100%);
   box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.2);
   font-weight: 500;
   padding: 0.6rem 2rem;
@@ -323,7 +324,7 @@ header {
   border-radius: 50%;
   margin-bottom: 1.5rem;
   background-color: #fff;
-  color: rgba(255, 149, 0, 0.411);
+  color: #3588b1;
   font-size: 48px;
   text-align: center;
   line-height: 80px;
@@ -498,7 +499,7 @@ header {
 }
 
 .show > .btn-primary.dropdown-toggle {
-  background-image: linear-gradient(122deg, rgba(255, 149, 0, 0.411) 0, bg-button-gradient-1 100%);
+  background-image: linear-gradient(122deg, #3588b1 0, bg-button-gradient-1 100%);
   box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.3);
   color: #fff;
 }
@@ -522,7 +523,7 @@ header {
   padding: 15px 0;
 }
 .ui-steps li:hover .circle-icon {
-  background-image: linear-gradient(122deg, #e6388e 0, rgba(255, 149, 0, 0.411) 100%);
+  background-image: linear-gradient(122deg, #e6388e 0, #3588b1 100%);
   box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.09);
   color: #fff;
 }
