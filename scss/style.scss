@@ -1,8 +1,8 @@
 @charset "UTF-8";
 //colors
 
-$bg-gradient-color-1: hsla(23, 100%, 50%, 0.747);
-$light-bg-color: rgba(255, 149, 0, 0.411);
+$bg-gradient-color-1: rgba(255, 149, 0, 0.411);
+$light-bg-color: hsla(23, 100%, 50%, 0.747);
 $bg-gradient-color-2: $light-bg-color;
 
 
@@ -36,10 +36,10 @@ $black_4: rgba(0, 0, 0, 0.04);
 $black_8: rgba(0, 0, 0, 0.08);
 $black_14: rgba(0, 0, 0, 0.14);
 $black_7: rgba(0, 0, 0, 0.07);
-$color_cerise_approx: #e6388e;
+$color_cerise_approx: #ff9600;
 $black_9: rgba(0, 0, 0, 0.09);
 $color_carousel_pink_approx: #f8e3f0;
-$color_london_hue_approx: #b5a4c8;
+$color_london_hue_approx: $smaller_header_color;
 $color_wild_sand_approx: #f5eff7;
 $color_boulder_approx: #7a767a;
 $color_snuff_approx: #e7d9eb;
@@ -120,9 +120,9 @@ h5 {
 	margin-bottom: 0.7rem;
 }
 p {
-	color: $color_mountain_mist_approx;
+	color: $smaller_header_color;
 	&.lead {
-		color: $color_shocking_approx;
+		color: $smaller_header_color;
 		margin-bottom: 2rem;
 	}
 }
@@ -599,10 +599,10 @@ header {
 .ui-steps li {
 	padding: 15px 0;
 	&:hover .circle-icon {
-		background-image: linear-gradient(122deg, $color_cerise_approx 0, $bg-button-gradient-2 100%);
+		 
 		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		box-shadow: 0 9px 32px 0 $black_9;
-		color: $white;
+		 
 	}
 	&:not(:last-child) {
 		border-bottom: 1px solid $color_carousel_pink_approx;
