@@ -1,3 +1,4 @@
 .sass-cache/**
 deploy.js
 node_modules
+dist/**

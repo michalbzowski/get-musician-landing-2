@@ -4,8 +4,14 @@
   "description": "Strona ladowania dla serwisu getmusician",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist/*",
+    "prebuild": "npm run clean -s && sass scss:css",
+    "build": "cp index.html dist/index.html && cp .htacces dist/.htacces && cp -r css dist/css && cp -r images dist/images && cp -r js dist/js && cp -r fonts dist/fonts",
+    "postbuild": "node replace-in-files",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "node deploy"
+    "deploy": "node deploy",
+    "release" : "npm run build && npm run deploy",
+    "dev": "npm-run-all --parallel \"live-reload -s\" \"serve -s\" \"watch -s\" \"open:dev -s\""
   },
   "repository": {
     "type": "git",
@@ -18,10 +24,12 @@
   },
   "homepage": "https://github.com/Machcak/get-musician-landing-2#readme",
   "devDependencies": {
-    "ftp-deploy": "^2.1.3"
+    "ftp-deploy": "^2.1.3",
+    "rimraf": "^2.6.2",
+    "replace-in-files": "^1.1.2"
   },
   "dependencies": {
-    "replace-in-file": "^3.4.2",
-    "replace-in-files": "^1.1.2"
+    "browserify": "^16.2.3"
+    
   }
 }
