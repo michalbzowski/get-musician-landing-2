@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "prebuild": "npm run clean -s && sass scss:css",
-    "build": "cp index.html dist/index.html && cp .htacces dist/.htacces && cp -r css dist/css && cp -r images dist/images && cp -r js dist/js && cp -r fonts dist/fonts",
+    "build": "cp index.html dist/index.html && cp .htaccess dist/.htaccess && cp -r css dist/css && cp -r images dist/images && cp -r js dist/js && cp -r fonts dist/fonts",
     "postbuild": "node replace-in-files",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "node deploy",

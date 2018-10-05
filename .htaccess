@@ -3,6 +3,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+
+
+
 # DISABLE DIRECTORY INDEXES
 Options -Indexes
 
@@ -16,19 +19,26 @@ ErrorDocument 401 getmusician.pl
 ErrorDocument 403 getmusician.pl
 
 #Własna strona błędu 404
-ErrorDocument 404 getmusician.pl
-
-Header set Content-Security-Policy "
-    default-src 'self';
-    script-src 'self' www.google-analytics.com *.cloudflare.com;
-    img-src *.cloudflare.com; 
-    base-uri 'self';
-"
 ErrorDocument 404 https://getmusician.pl
 
+Header set Content-Security-Policy default-src 'self'; script-src 'self' www.google-analytics.com; img-src 'self'; 
 
-# Extra Security Headers
-Header set X-XSS-Protection "1; mode=block"
-Header always append X-Frame-Options SAMEORIGIN
-Header set X-Content-Type-Options nosniff
+Header set X-Content-Type-Options nosniff;
+
+Header set X-Frame-Options: allow-from https://www.responsinator.com http://www.responsinator.com http://www.mobilephoneemulator.com/ www.mobilephoneemulator.com mobilephoneemulator.com http://quirktools.com quirktools.com;
+
+Header set Strict-Transport-Security "max-age=631138519; includeSubDomains";
+
+# Always set these headers.
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
+     
+# Added a rewrite to respond with a 200 SUCCESS on every OPTIONS request.
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+
 

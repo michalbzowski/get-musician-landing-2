@@ -85,6 +85,11 @@ p.lead {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 360px) {
+  .btn {
+    font-size: 0.8em;
+  }
+}
 .btn-primary {
   border-radius: 3px;
   background-image: linear-gradient(122deg, #3537b1 0, #3588b1 100%);
